@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Dojo | Master the Plant. Master Yourself.</title>
+  <meta name="description" content="A clean starter website for your brand, services, classes, and creative projects." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#">Plant Dojo</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn small" href="#contact">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Private Chef • Wellness Classes • Creative Food Concepts</p>
+        <h1>Master the Plant. Master Yourself.</h1>
+        <p>
+          A bold wellness and culinary brand built around plant-based meals,
+          hands-on education, healing ingredients, and creative storytelling.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#services">Explore Services</a>
+          <a class="btn secondary" href="#contact">Start a Project</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>Featured Offer</h2>
+        <p>Book a private chef experience, cooking class, menu consultation, or custom wellness package.</p>
+        <span class="tag">Fresh • Intentional • Creative</span>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <p class="eyebrow">What We Do</p>
+        <h2>Services</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Private Chef</h3>
+            <p>Custom plant-forward dinners, soul food experiences, meal prep, and special events.</p>
+          </article>
+          <article class="card">
+            <h3>Menu Design</h3>
+            <p>Recipe development, costing support, restaurant consulting, and kitchen training.</p>
+          </article>
+          <article class="card">
+            <h3>Wellness Packages</h3>
+            <p>Herb guides, detox-style food plans, organ-based meal concepts, and education tools.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="classes" class="section alt">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Teach. Cook. Create.</p>
+          <h2>Classes & Workshops</h2>
+          <p>
+            Build hands-on classes for gardening, storage, preserving, ice cream,
+            sorbet, kitchen confidence, and creative recipe development.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>Gardening from kitchen scraps</li>
+          <li>Plant-based cooking basics</li>
+          <li>Food safety and storage</li>
+          <li>Creative recipe journals</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">The Mission</p>
+          <h2>Food as discipline, healing, and art.</h2>
+        </div>
+        <p>
+          Plant Dojo blends chef-level technique with cultural flavor, natural wellness,
+          and creative education. This starter site can grow into a full business site,
+          class hub, blog, shop, or booking page.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <p class="eyebrow">Let’s Work</p>
+        <h2>Book a service or ask a question</h2>
+        <form>
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea placeholder="Tell me what you need..." rows="5" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <p class="form-note">This form is visual only. Connect Formspree, Netlify Forms, or a backend later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Plant Dojo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
