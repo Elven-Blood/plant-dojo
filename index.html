@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Dojo Recipe + Membership OS</title>
-  <meta name="description" content="Plant Dojo interactive organ menus with clickable recipes, benefits, journaling, and membership portal structure." />
+  <title>Plant Dojo Body OS + Healing Hand</title>
+  <meta name="description" content="Plant Dojo interactive Body OS with organ menus, recipes, and Healing Hand herb card game." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,10 +15,11 @@
   </a>
   <button class="menuBtn" aria-label="Open menu">☰</button>
   <nav class="nav">
+    <a href="#body-os">Body OS</a>
     <a href="#organ-menus">Organ Menus</a>
     <a href="#recipes">Recipes</a>
-    <a href="#journal">Journal</a>
-    <a href="#offers">Products</a>
+    <a href="#healing-hand">Healing Hand</a>
+    <a href="#store">Store</a>
     <a href="#membership" class="pill">Membership</a>
   </nav>
 </header>
@@ -26,41 +27,93 @@
 <main>
   <section id="home" class="hero section">
     <div>
-      <p class="eyebrow">Plant Dojo Body OS</p>
-      <h1>Food, herbs, recipes, and education by organ system.</h1>
-      <p class="lead">Explore free organ education, then unlock premium recipe packs, classes, PDFs, consultations, and membership access.</p>
+      <p class="eyebrow">Plant Dojo Operating System</p>
+      <h1>Food, herbs, organ wisdom, and card game learning in one platform.</h1>
+      <p class="lead">Explore the human body map, unlock organ menus, open recipe cards, and learn herbs through the Healing Hand card game.</p>
       <div class="actions">
-        <a href="#recipes" class="btn">Open Recipe Cards</a>
-        <a href="#membership" class="btn ghost">View Membership</a>
+        <a href="#body-os" class="btn">Open Body Map</a>
+        <a href="#healing-hand" class="btn ghost">Play Healing Hand</a>
       </div>
       <p class="notice">Educational wellness guidance only. Not medical advice.</p>
     </div>
     <div class="heroPanel">
-      <p class="eyebrow">Platform Structure</p>
-      <h3>Free Education + Paid Products + Premium Classes</h3>
-      <p>Give people value for free, then sell deeper guides, recipe packs, consultations, classes, and memberships.</p>
+      <p class="eyebrow">Platform Build</p>
+      <h3>Free Education + Paid Decks + Membership</h3>
+      <p>Give away the foundation. Sell the deeper guides, cards, classes, recipe packs, and custom services.</p>
     </div>
   </section>
 
-  <section id="organ-menus" class="section alt">
+  <section id="body-os" class="section alt">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Interactive Human Body Map</p>
+        <h2>Tap the body. Feed the system.</h2>
+      </div>
+      <p>The body map is back. Select any system to update the protocol and open its full organ menu.</p>
+    </div>
+
+    <div class="bodyLayout">
+      <div class="bodyMap" aria-label="Interactive human body map">
+        <div class="bodyAura"></div>
+        <div class="shape head"></div>
+        <div class="shape neck"></div>
+        <div class="shape torso"></div>
+        <div class="shape pelvis"></div>
+        <div class="shape arm left"></div>
+        <div class="shape arm right"></div>
+        <div class="shape forearm left"></div>
+        <div class="shape forearm right"></div>
+        <div class="shape leg left"></div>
+        <div class="shape leg right"></div>
+
+        <button class="organDot" style="--x:50%;--y:10%" data-system="Brain">Brain</button>
+        <button class="organDot" style="--x:34%;--y:22%" data-system="Eyes & Vision">Eyes</button>
+        <button class="organDot" style="--x:40%;--y:38%" data-system="Lungs">Lungs</button>
+        <button class="organDot" style="--x:59%;--y:42%" data-system="Heart">Heart</button>
+        <button class="organDot" style="--x:42%;--y:54%" data-system="Liver">Liver</button>
+        <button class="organDot" style="--x:61%;--y:57%" data-system="Spleen">Spleen</button>
+        <button class="organDot" style="--x:50%;--y:67%" data-system="Gut & Digestion">Gut</button>
+        <button class="organDot" style="--x:50%;--y:77%" data-system="Kidneys & Adrenals">Kidneys</button>
+        <button class="organDot" style="--x:50%;--y:88%" data-system="Reproductive">Reproductive</button>
+        <button class="organDot" style="--x:18%;--y:44%" data-system="Skin & Lymph">Skin</button>
+        <button class="organDot" style="--x:82%;--y:44%" data-system="Blood & Circulation">Blood</button>
+        <button class="organDot" style="--x:50%;--y:49%" data-system="Nervous System">Nerves</button>
+      </div>
+
+      <article class="panel">
+        <p class="eyebrow" id="systemTone">Select a system</p>
+        <h3 id="systemTitle">Body Guidance</h3>
+        <p id="systemSummary">Tap a point on the body map to open a protocol.</p>
+        <div class="miniGrid">
+          <div><strong>Foods</strong><ul id="foodsList"></ul></div>
+          <div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div>
+          <div><strong>Practice</strong><ul id="practiceList"></ul></div>
+          <div><strong>Inner Work</strong><ul id="innerList"></ul></div>
+        </div>
+        <a href="#organ-menus" class="btn miniBtn">View Full Organ Menu</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="organ-menus" class="section">
     <div class="sectionHead">
       <div>
         <p class="eyebrow">Full Organ Menus</p>
-        <h2>Choose a system. Feed the system.</h2>
+        <h2>Tea, juice, salad, meal, herbs, and practice.</h2>
       </div>
-      <p>Each organ menu includes herbs, tea, juice, salad, warm meal, journal work, and products/classes you can sell.</p>
+      <p>Every system gets a full Plant Dojo pathway that can become a recipe card, PDF, class, QR card, or product.</p>
     </div>
     <div id="menuTabs" class="filters"></div>
     <article id="organMenuCard" class="fullMenuCard"></article>
   </section>
 
-  <section id="recipes" class="section">
+  <section id="recipes" class="section alt">
     <div class="sectionHead">
       <div>
         <p class="eyebrow">Clickable Recipe Cards</p>
-        <h2>Tap a recipe to open the full card.</h2>
+        <h2>Tap a card to open full details.</h2>
       </div>
-      <p>Each card explains the method, ingredient benefits, organ connection, and whether it is best for detox, reset, nourish, calm, or circulation.</p>
+      <p>Each recipe explains the organ connection, herbs, benefits, practice, and paid product angle.</p>
     </div>
     <div class="filters">
       <button class="filterBtn active" data-filter="all">All</button>
@@ -75,71 +128,100 @@
     <div id="recipeGrid" class="cardGrid"></div>
   </section>
 
-  <section id="journal" class="section alt">
+  <section id="healing-hand" class="section">
     <div class="sectionHead">
       <div>
-        <p class="eyebrow">Journal + Practice</p>
-        <h2>Turn inner work into a daily ritual.</h2>
+        <p class="eyebrow">Healing Hand Card Game</p>
+        <h2>Learn herbs like a game. Sell it like a product.</h2>
       </div>
-      <p>This section can become a paid printable journal, daily text challenge, or member-only guided practice.</p>
+      <p>Flip cards, study herb powers, match them to organs, and preview the deck as a future digital/physical product.</p>
     </div>
-    <div id="journalGrid" class="cardGrid"></div>
+
+    <div class="gameIntro">
+      <article class="gameBox">
+        <h3>How It Works</h3>
+        <ul>
+          <li>Draw herb cards.</li>
+          <li>Match herbs to patient needs.</li>
+          <li>Support organ systems.</li>
+          <li>Earn vitality and mastery.</li>
+        </ul>
+      </article>
+      <article class="gameBox">
+        <h3>Deck Progress</h3>
+        <div class="progressRow"><span>White Belt Herbs</span><strong>25 / 100</strong></div>
+        <div class="progress"><span style="width:25%"></span></div>
+        <div class="progressRow"><span>Patients</span><strong>10 / 50</strong></div>
+        <div class="progress"><span style="width:20%"></span></div>
+        <div class="progressRow"><span>Organs</span><strong>12 / 12</strong></div>
+        <div class="progress"><span style="width:100%"></span></div>
+      </article>
+    </div>
+
+    <div class="filters">
+      <button class="cardFilter active" data-card-filter="all">All Herbs</button>
+      <button class="cardFilter" data-card-filter="Gut">Gut</button>
+      <button class="cardFilter" data-card-filter="Lungs">Lungs</button>
+      <button class="cardFilter" data-card-filter="Heart">Heart</button>
+      <button class="cardFilter" data-card-filter="Nervous">Nervous</button>
+      <button class="cardFilter" data-card-filter="Skin">Skin</button>
+      <button class="cardFilter" data-card-filter="Blood">Blood</button>
+    </div>
+
+    <input id="herbSearch" class="searchBox" placeholder="Search herb card: ginger, mullein, hawthorn..." />
+    <div id="herbCardGrid" class="flipGrid"></div>
   </section>
 
-  <section id="offers" class="section">
+  <section id="game-cards" class="section alt">
     <div class="sectionHead">
       <div>
-        <p class="eyebrow">Products + Classes</p>
-        <h2>What Plant Dojo can sell.</h2>
+        <p class="eyebrow">Patient + Organ Cards</p>
+        <h2>The game gets deeper than herbs.</h2>
       </div>
-      <p>Free education builds trust. Paid products give structure, detail, support, and access.</p>
+      <p>These cards can become expansion packs, teaching tools, class activities, or printable downloads.</p>
     </div>
-    <div id="offerGrid" class="cardGrid"></div>
+    <div id="patientGrid" class="cardGrid"></div>
+    <div id="organCardGrid" class="cardGrid"></div>
+  </section>
+
+  <section id="store" class="section">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Store Roadmap</p>
+        <h2>Products this website can sell.</h2>
+      </div>
+      <p>Buttons are placeholders. Replace them with Stripe, PayPal, Gumroad, Shopify, or booking links later.</p>
+    </div>
+    <div class="cardGrid">
+      <article class="storeCard"><p class="eyebrow">Digital</p><h3>Healing Hand PDF Deck</h3><p>Printable herb cards, patient cards, and rules.</p><a class="btn" href="#" onclick="fakePay()">Preorder</a></article>
+      <article class="storeCard"><p class="eyebrow">Physical</p><h3>Starter Deck</h3><p>White Belt Herbs + Patient Cards + Rulebook.</p><a class="btn" href="#" onclick="fakePay()">Join Waitlist</a></article>
+      <article class="storeCard"><p class="eyebrow">Education</p><h3>Organ Menu Class Pack</h3><p>Teacher guide, student worksheets, recipe cards, and journal sheets.</p><a class="btn" href="#" onclick="fakePay()">Unlock</a></article>
+    </div>
   </section>
 
   <section id="membership" class="section membership alt">
-    <p class="eyebrow centerText">Membership + Payment Portal</p>
+    <p class="eyebrow centerText">Membership Portal</p>
     <h2 class="centerText">Free learning. Paid deeper access.</h2>
-    <p class="centerText planSub">These buttons are placeholders. Later you replace the links with Stripe Payment Links, PayPal, Gumroad, Shopify, Patreon, or a real member portal.</p>
+    <p class="centerText planSub">This is the structure. Later we can connect real payment links and gated downloads.</p>
 
     <div class="pricingGrid">
       <article class="priceCard">
         <p class="eyebrow">Free</p>
         <h3>Plant Dojo Library</h3>
-        <p>For public education and brand trust.</p>
-        <ul>
-          <li>Basic organ menus</li>
-          <li>Starter recipe cards</li>
-          <li>Herb/soap previews</li>
-          <li>Free journal prompts</li>
-        </ul>
-        <a class="btn ghost" href="#recipes">Start Free</a>
+        <ul><li>Body map</li><li>Starter organ menus</li><li>Sample recipe cards</li><li>Sample herb cards</li></ul>
+        <a class="btn ghost" href="#body-os">Start Free</a>
       </article>
-
       <article class="priceCard featured">
-        <p class="eyebrow">Paid</p>
+        <p class="eyebrow">Member</p>
         <h3>Dojo Member</h3>
-        <p>Monthly access to deeper education.</p>
-        <ul>
-          <li>Full recipe packs</li>
-          <li>Organ PDF guides</li>
-          <li>Class replays</li>
-          <li>Member-only protocols</li>
-        </ul>
-        <a class="btn" href="#" onclick="alert('Replace this with your Stripe, PayPal, Gumroad, or Shopify membership link.')">Join Membership</a>
+        <ul><li>Full recipe packs</li><li>Printable PDFs</li><li>Healing Hand downloads</li><li>Class replays</li></ul>
+        <a class="btn" href="#" onclick="fakePay()">Join Membership</a>
       </article>
-
       <article class="priceCard">
         <p class="eyebrow">Premium</p>
-        <h3>Private Dojo</h3>
-        <p>High-ticket coaching, chef services, and custom plans.</p>
-        <ul>
-          <li>Private chef booking</li>
-          <li>Custom organ menu</li>
-          <li>1-on-1 consultation</li>
-          <li>Business/class package</li>
-        </ul>
-        <a class="btn ghost" href="#" onclick="alert('Replace this with your booking or checkout link.')">Book Service</a>
+        <h3>Master Herbalist</h3>
+        <ul><li>Certification workbook</li><li>Full card deck files</li><li>Private consultation</li><li>Business/class toolkit</li></ul>
+        <a class="btn ghost" href="#" onclick="fakePay()">Apply</a>
       </article>
     </div>
   </section>
@@ -152,7 +234,7 @@
   </div>
 </div>
 
-<footer>© <span id="year"></span> Plant Dojo Body OS · Educational use only.</footer>
+<footer>© <span id="year"></span> Plant Dojo Body OS + Healing Hand · Educational use only.</footer>
 <script src="script.js"></script>
 </body>
 </html>
