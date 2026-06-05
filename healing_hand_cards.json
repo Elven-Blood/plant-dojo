@@ -1,0 +1,10 @@
+{
+  "deck":"White Belt Herbs",
+  "cards":[
+    {"name":"Ginger","system":"Gut","power":"Digestive +3"},
+    {"name":"Peppermint","system":"Gut","power":"Cooling +2"},
+    {"name":"Mullein","system":"Lungs","power":"Respiratory +3"},
+    {"name":"Hawthorn","system":"Heart","power":"Circulation +3"},
+    {"name":"Calendula","system":"Skin","power":"Skin +3"}
+  ]
+}
