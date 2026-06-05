@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Dojo Body OS</title>
-  <meta name="description" content="Interactive Plant Dojo Body Guidance Operating System." />
+  <title>Plant Dojo Body OS Toolkit</title>
+  <meta name="description" content="Plant Dojo interactive body map, recipe card library, and soap encyclopedia." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="topbar">
   <a class="brand" href="#home">
     <span class="seal">🌿</span>
-    <span><strong>Plant Dojo</strong><small>Master the Plant. Master Yourself.</small></span>
+    <span>
+      <strong>Plant Dojo</strong>
+      <small>Master the Plant. Master Yourself.</small>
+    </span>
   </a>
+
   <button class="menuBtn" aria-label="Open menu">☰</button>
+
   <nav class="nav">
     <a href="#daily">Daily OS</a>
     <a href="#organ-map">Organ Map</a>
-    <a href="#services">Services</a>
     <a href="#toolkit">Toolkit</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#soap">Soap</a>
     <a href="#booking" class="pill">Book</a>
   </nav>
 </header>
@@ -27,18 +33,25 @@
   <section id="home" class="hero section">
     <div>
       <p class="eyebrow">Body Guidance Operating System</p>
-      <h1>Know thy self through food, plants, rhythm, and daily practice.</h1>
-      <p class="lead">Choose an intention, select a body system, and receive a simple Plant Dojo plan for eating, drinking, practicing, reflecting, and avoiding what pulls you off balance.</p>
+      <h1>Food, plants, rhythm, and daily practice.</h1>
+      <p class="lead">
+        Choose an intention, select a body system, and receive a Plant Dojo daily plan
+        with foods, herbs, recipes, soap ingredients, practices, and inner work.
+      </p>
       <div class="actions">
         <a href="#daily" class="btn">Begin Daily OS</a>
-        <a href="#organ-map" class="btn ghost">Explore Body Map</a>
+        <a href="#toolkit" class="btn ghost">Open Toolkit</a>
       </div>
-      <p class="notice">Educational wellness guidance only. Not medical advice.</p>
+      <p class="notice">Educational wellness content only. Not medical advice.</p>
     </div>
+
     <div class="orbitCard">
       <div class="orbit">
-        <span>Daily</span><span>Herbs</span><span>Meals</span><span>Ritual</span>
-        <div class="orbitCenter">Plant<br>Dojo<br>OS</div>
+        <span>Daily</span>
+        <span>Recipes</span>
+        <span>Soap</span>
+        <span>Herbs</span>
+        <div class="orbitCenter">Plant<br />Dojo<br />OS</div>
       </div>
     </div>
   </section>
@@ -55,7 +68,7 @@
         <p class="eyebrow">Interactive Organ Map</p>
         <h2>Where do you feel called?</h2>
       </div>
-      <p>Select a body system to reveal foods, herbs, drinks, practices, and inner work.</p>
+      <p>Select a body system to reveal foods, herbs, drinks, practices, inner work, and recipe support.</p>
     </div>
 
     <div class="bodyLayout">
@@ -85,6 +98,7 @@
         <p class="eyebrow" id="systemTone">Select a system</p>
         <h3 id="systemTitle">Body Guidance</h3>
         <p id="systemSummary">Tap a point on the body map to open a protocol.</p>
+
         <div class="miniGrid">
           <div><strong>Foods</strong><ul id="foodsList"></ul></div>
           <div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div>
@@ -98,35 +112,70 @@
   <section id="plan" class="section">
     <p class="eyebrow centerText" id="planMeta">Daily OS</p>
     <h2 class="centerText">Your Plan for Today</h2>
-    <p class="centerText planSub">Choose an intention and body system, then this becomes your practical guide.</p>
+    <p class="centerText planSub">Choose an intention and body system. This becomes your practical guide.</p>
     <div id="planGrid" class="planGrid"></div>
   </section>
 
-  <section id="services" class="section alt">
-    <p class="eyebrow">Services</p>
-    <h2>Turn the Body OS into your business ecosystem.</h2>
-    <div class="cards">
-      <div class="card"><h3>Private Chef</h3><p>Plant-forward soul food, mushroom-based dishes, wellness dinners, and event menus.</p></div>
-      <div class="card"><h3>Classes</h3><p>Gardening, preservation, cooking technique, herbs, organ systems, and hands-on student workbooks.</p></div>
-      <div class="card"><h3>Body OS Packages</h3><p>Custom food paths, herb cards, recipe cards, PDF guides, QR cards, and digital downloads.</p></div>
-    </div>
-  </section>
-
-  <section id="toolkit" class="section">
+  <section id="toolkit" class="section alt">
     <p class="eyebrow">Toolkit</p>
     <h2>Build the library.</h2>
     <div class="toolList">
-      <span>Herb Cards</span><span>Recipe Cards</span><span>Body PDFs</span><span>Class Workbooks</span><span>Soap Encyclopedia</span><span>QR Cards</span>
+      <a href="#recipes">Recipe Cards</a>
+      <a href="#soap">Soap Encyclopedia</a>
+      <a href="#organ-map">Body System Map</a>
+      <a href="#daily">Daily OS</a>
+      <a href="#booking">Book Session</a>
     </div>
   </section>
 
-  <section id="booking" class="section booking alt">
+  <section id="recipes" class="section">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Recipe Cards</p>
+        <h2>Plant Dojo Kitchen Library</h2>
+      </div>
+      <p>Filter recipe cards by body system, intention, and kitchen use.</p>
+    </div>
+
+    <div class="filters">
+      <button class="filterBtn active" data-filter="all">All</button>
+      <button class="filterBtn" data-filter="Liver">Liver</button>
+      <button class="filterBtn" data-filter="Lungs">Lungs</button>
+      <button class="filterBtn" data-filter="Heart">Heart</button>
+      <button class="filterBtn" data-filter="Gut">Gut</button>
+      <button class="filterBtn" data-filter="Skin">Skin</button>
+      <button class="filterBtn" data-filter="Nervous">Nervous</button>
+    </div>
+
+    <div id="recipeGrid" class="cardGrid"></div>
+  </section>
+
+  <section id="soap" class="section alt">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Soap Encyclopedia</p>
+        <h2>Customize a Soap Bar</h2>
+      </div>
+      <p>Search ingredients by skin goal, aroma, benefit, and blend idea.</p>
+    </div>
+
+    <input id="soapSearch" class="searchBox" placeholder="Search: peppermint, lavender, turmeric, oily skin, calming..." />
+    <div id="soapGrid" class="cardGrid"></div>
+  </section>
+
+  <section id="booking" class="section booking">
     <p class="eyebrow">Booking</p>
     <h2>Start a Plant Dojo session</h2>
     <form>
-      <input placeholder="Name">
-      <input placeholder="Email or phone">
-      <select><option>Private chef</option><option>Wellness class</option><option>Menu consulting</option><option>Body OS package</option></select>
+      <input placeholder="Name" />
+      <input placeholder="Email or phone" />
+      <select>
+        <option>Private chef</option>
+        <option>Wellness class</option>
+        <option>Menu consulting</option>
+        <option>Body OS package</option>
+        <option>Soap customization</option>
+      </select>
       <textarea rows="5" placeholder="Tell me what you need..."></textarea>
       <button type="button" class="btn">Send Request</button>
     </form>
