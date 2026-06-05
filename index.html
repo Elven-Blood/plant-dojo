@@ -3,120 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Dojo | Master the Plant. Master Yourself.</title>
-  <meta name="description" content="A clean starter website for your brand, services, classes, and creative projects." />
+  <title>Plant Dojo Body OS</title>
+  <meta name="description" content="Interactive Plant Dojo Body Guidance Operating System." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="logo" href="#">Plant Dojo</a>
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a class="btn small" href="#contact">Book Now</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="seal">🌿</span>
+    <span><strong>Plant Dojo</strong><small>Master the Plant. Master Yourself.</small></span>
+  </a>
+  <button class="menuBtn" aria-label="Open menu">☰</button>
+  <nav class="nav">
+    <a href="#daily">Daily OS</a>
+    <a href="#organ-map">Organ Map</a>
+    <a href="#services">Services</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#booking" class="pill">Book</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-text">
-        <p class="eyebrow">Private Chef • Wellness Classes • Creative Food Concepts</p>
-        <h1>Master the Plant. Master Yourself.</h1>
-        <p>
-          A bold wellness and culinary brand built around plant-based meals,
-          hands-on education, healing ingredients, and creative storytelling.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#services">Explore Services</a>
-          <a class="btn secondary" href="#contact">Start a Project</a>
-        </div>
+<main>
+  <section id="home" class="hero section">
+    <div>
+      <p class="eyebrow">Body Guidance Operating System</p>
+      <h1>Know thy self through food, plants, rhythm, and daily practice.</h1>
+      <p class="lead">Choose an intention, select a body system, and receive a simple Plant Dojo plan for eating, drinking, practicing, reflecting, and avoiding what pulls you off balance.</p>
+      <div class="actions">
+        <a href="#daily" class="btn">Begin Daily OS</a>
+        <a href="#organ-map" class="btn ghost">Explore Body Map</a>
       </div>
-      <div class="hero-card">
-        <h2>Featured Offer</h2>
-        <p>Book a private chef experience, cooking class, menu consultation, or custom wellness package.</p>
-        <span class="tag">Fresh • Intentional • Creative</span>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <p class="eyebrow">What We Do</p>
-        <h2>Services</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Private Chef</h3>
-            <p>Custom plant-forward dinners, soul food experiences, meal prep, and special events.</p>
-          </article>
-          <article class="card">
-            <h3>Menu Design</h3>
-            <p>Recipe development, costing support, restaurant consulting, and kitchen training.</p>
-          </article>
-          <article class="card">
-            <h3>Wellness Packages</h3>
-            <p>Herb guides, detox-style food plans, organ-based meal concepts, and education tools.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="classes" class="section alt">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">Teach. Cook. Create.</p>
-          <h2>Classes & Workshops</h2>
-          <p>
-            Build hands-on classes for gardening, storage, preserving, ice cream,
-            sorbet, kitchen confidence, and creative recipe development.
-          </p>
-        </div>
-        <ul class="feature-list">
-          <li>Gardening from kitchen scraps</li>
-          <li>Plant-based cooking basics</li>
-          <li>Food safety and storage</li>
-          <li>Creative recipe journals</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">The Mission</p>
-          <h2>Food as discipline, healing, and art.</h2>
-        </div>
-        <p>
-          Plant Dojo blends chef-level technique with cultural flavor, natural wellness,
-          and creative education. This starter site can grow into a full business site,
-          class hub, blog, shop, or booking page.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container">
-        <p class="eyebrow">Let’s Work</p>
-        <h2>Book a service or ask a question</h2>
-        <form>
-          <input type="text" placeholder="Your name" required />
-          <input type="email" placeholder="Your email" required />
-          <textarea placeholder="Tell me what you need..." rows="5" required></textarea>
-          <button class="btn" type="submit">Send Message</button>
-        </form>
-        <p class="form-note">This form is visual only. Connect Formspree, Netlify Forms, or a backend later.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Plant Dojo. All rights reserved.</p>
+      <p class="notice">Educational wellness guidance only. Not medical advice.</p>
     </div>
-  </footer>
+    <div class="orbitCard">
+      <div class="orbit">
+        <span>Daily</span><span>Herbs</span><span>Meals</span><span>Ritual</span>
+        <div class="orbitCenter">Plant<br>Dojo<br>OS</div>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="daily" class="section">
+    <p class="eyebrow centerText">Begin Here</p>
+    <h2 class="centerText">What do you want to fulfill today?</h2>
+    <div id="intentGrid" class="intentGrid"></div>
+  </section>
+
+  <section id="organ-map" class="section alt">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Interactive Organ Map</p>
+        <h2>Where do you feel called?</h2>
+      </div>
+      <p>Select a body system to reveal foods, herbs, drinks, practices, and inner work.</p>
+    </div>
+
+    <div class="bodyLayout">
+      <div class="bodyMap">
+        <div class="shape head"></div>
+        <div class="shape torso"></div>
+        <div class="shape arm left"></div>
+        <div class="shape arm right"></div>
+        <div class="shape leg left"></div>
+        <div class="shape leg right"></div>
+
+        <button class="organDot" style="--x:50%;--y:11%" data-system="Brain">Brain</button>
+        <button class="organDot" style="--x:33%;--y:23%" data-system="Eyes & Vision">Eyes</button>
+        <button class="organDot" style="--x:40%;--y:40%" data-system="Lungs">Lungs</button>
+        <button class="organDot" style="--x:58%;--y:43%" data-system="Heart">Heart</button>
+        <button class="organDot" style="--x:42%;--y:55%" data-system="Liver">Liver</button>
+        <button class="organDot" style="--x:60%;--y:59%" data-system="Spleen">Spleen</button>
+        <button class="organDot" style="--x:48%;--y:69%" data-system="Gut & Digestion">Gut</button>
+        <button class="organDot" style="--x:50%;--y:79%" data-system="Kidneys & Adrenals">Kidneys</button>
+        <button class="organDot" style="--x:50%;--y:91%" data-system="Reproductive">Reproductive</button>
+        <button class="organDot" style="--x:18%;--y:43%" data-system="Skin & Lymph">Skin</button>
+        <button class="organDot" style="--x:82%;--y:43%" data-system="Blood & Circulation">Blood</button>
+        <button class="organDot" style="--x:50%;--y:50%" data-system="Nervous System">Nerves</button>
+      </div>
+
+      <article class="panel">
+        <p class="eyebrow" id="systemTone">Select a system</p>
+        <h3 id="systemTitle">Body Guidance</h3>
+        <p id="systemSummary">Tap a point on the body map to open a protocol.</p>
+        <div class="miniGrid">
+          <div><strong>Foods</strong><ul id="foodsList"></ul></div>
+          <div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div>
+          <div><strong>Practice</strong><ul id="practiceList"></ul></div>
+          <div><strong>Inner Work</strong><ul id="innerList"></ul></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="plan" class="section">
+    <p class="eyebrow centerText" id="planMeta">Daily OS</p>
+    <h2 class="centerText">Your Plan for Today</h2>
+    <p class="centerText planSub">Choose an intention and body system, then this becomes your practical guide.</p>
+    <div id="planGrid" class="planGrid"></div>
+  </section>
+
+  <section id="services" class="section alt">
+    <p class="eyebrow">Services</p>
+    <h2>Turn the Body OS into your business ecosystem.</h2>
+    <div class="cards">
+      <div class="card"><h3>Private Chef</h3><p>Plant-forward soul food, mushroom-based dishes, wellness dinners, and event menus.</p></div>
+      <div class="card"><h3>Classes</h3><p>Gardening, preservation, cooking technique, herbs, organ systems, and hands-on student workbooks.</p></div>
+      <div class="card"><h3>Body OS Packages</h3><p>Custom food paths, herb cards, recipe cards, PDF guides, QR cards, and digital downloads.</p></div>
+    </div>
+  </section>
+
+  <section id="toolkit" class="section">
+    <p class="eyebrow">Toolkit</p>
+    <h2>Build the library.</h2>
+    <div class="toolList">
+      <span>Herb Cards</span><span>Recipe Cards</span><span>Body PDFs</span><span>Class Workbooks</span><span>Soap Encyclopedia</span><span>QR Cards</span>
+    </div>
+  </section>
+
+  <section id="booking" class="section booking alt">
+    <p class="eyebrow">Booking</p>
+    <h2>Start a Plant Dojo session</h2>
+    <form>
+      <input placeholder="Name">
+      <input placeholder="Email or phone">
+      <select><option>Private chef</option><option>Wellness class</option><option>Menu consulting</option><option>Body OS package</option></select>
+      <textarea rows="5" placeholder="Tell me what you need..."></textarea>
+      <button type="button" class="btn">Send Request</button>
+    </form>
+    <p class="notice">Form is visual for now. We can connect it later.</p>
+  </section>
+</main>
+
+<footer>© <span id="year"></span> Plant Dojo Body OS · Educational use only.</footer>
+<script src="script.js"></script>
 </body>
 </html>
