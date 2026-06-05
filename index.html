@@ -3,28 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Dojo Body OS Toolkit</title>
-  <meta name="description" content="Plant Dojo interactive body map, recipe card library, and soap encyclopedia." />
+  <title>Plant Dojo Organ Menu OS</title>
+  <meta name="description" content="Plant Dojo interactive organ menus with herbs, teas, recipes, and body-system meals." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="topbar">
   <a class="brand" href="#home">
     <span class="seal">🌿</span>
-    <span>
-      <strong>Plant Dojo</strong>
-      <small>Master the Plant. Master Yourself.</small>
-    </span>
+    <span><strong>Plant Dojo</strong><small>Master the Plant. Master Yourself.</small></span>
   </a>
-
   <button class="menuBtn" aria-label="Open menu">☰</button>
-
   <nav class="nav">
     <a href="#daily">Daily OS</a>
     <a href="#organ-map">Organ Map</a>
-    <a href="#toolkit">Toolkit</a>
+    <a href="#organ-menus">Organ Menus</a>
     <a href="#recipes">Recipes</a>
-    <a href="#soap">Soap</a>
     <a href="#booking" class="pill">Book</a>
   </nav>
 </header>
@@ -32,27 +26,19 @@
 <main>
   <section id="home" class="hero section">
     <div>
-      <p class="eyebrow">Body Guidance Operating System</p>
-      <h1>Food, plants, rhythm, and daily practice.</h1>
-      <p class="lead">
-        Choose an intention, select a body system, and receive a Plant Dojo daily plan
-        with foods, herbs, recipes, soap ingredients, practices, and inner work.
-      </p>
+      <p class="eyebrow">Plant Dojo Body OS</p>
+      <h1>Full menus for every organ system.</h1>
+      <p class="lead">Choose a body system and unlock a full menu path: tea, juice, salad, warm meal, snack, herbs, practice, and reflection.</p>
       <div class="actions">
-        <a href="#daily" class="btn">Begin Daily OS</a>
-        <a href="#toolkit" class="btn ghost">Open Toolkit</a>
+        <a href="#organ-menus" class="btn">Open Organ Menus</a>
+        <a href="#organ-map" class="btn ghost">Use Body Map</a>
       </div>
-      <p class="notice">Educational wellness content only. Not medical advice.</p>
+      <p class="notice">Educational wellness guidance only. Not medical advice.</p>
     </div>
-
-    <div class="orbitCard">
-      <div class="orbit">
-        <span>Daily</span>
-        <span>Recipes</span>
-        <span>Soap</span>
-        <span>Herbs</span>
-        <div class="orbitCenter">Plant<br />Dojo<br />OS</div>
-      </div>
+    <div class="heroPanel">
+      <p class="eyebrow">Today’s Dojo Formula</p>
+      <h3>Tea + Juice + Salad + Warm Meal + Practice</h3>
+      <p>Each organ menu is built to become a future recipe card, PDF guide, class lesson, or QR health card.</p>
     </div>
   </section>
 
@@ -68,7 +54,7 @@
         <p class="eyebrow">Interactive Organ Map</p>
         <h2>Where do you feel called?</h2>
       </div>
-      <p>Select a body system to reveal foods, herbs, drinks, practices, inner work, and recipe support.</p>
+      <p>Tap a body point to update your protocol and organ menu.</p>
     </div>
 
     <div class="bodyLayout">
@@ -98,45 +84,37 @@
         <p class="eyebrow" id="systemTone">Select a system</p>
         <h3 id="systemTitle">Body Guidance</h3>
         <p id="systemSummary">Tap a point on the body map to open a protocol.</p>
-
         <div class="miniGrid">
           <div><strong>Foods</strong><ul id="foodsList"></ul></div>
           <div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div>
           <div><strong>Practice</strong><ul id="practiceList"></ul></div>
           <div><strong>Inner Work</strong><ul id="innerList"></ul></div>
         </div>
+        <a class="btn miniBtn" href="#organ-menus">View Full Menu</a>
       </article>
     </div>
   </section>
 
-  <section id="plan" class="section">
-    <p class="eyebrow centerText" id="planMeta">Daily OS</p>
-    <h2 class="centerText">Your Plan for Today</h2>
-    <p class="centerText planSub">Choose an intention and body system. This becomes your practical guide.</p>
-    <div id="planGrid" class="planGrid"></div>
-  </section>
-
-  <section id="toolkit" class="section alt">
-    <p class="eyebrow">Toolkit</p>
-    <h2>Build the library.</h2>
-    <div class="toolList">
-      <a href="#recipes">Recipe Cards</a>
-      <a href="#soap">Soap Encyclopedia</a>
-      <a href="#organ-map">Body System Map</a>
-      <a href="#daily">Daily OS</a>
-      <a href="#booking">Book Session</a>
+  <section id="organ-menus" class="section">
+    <div class="sectionHead">
+      <div>
+        <p class="eyebrow">Full Organ Menus</p>
+        <h2>Choose a system. Feed the system.</h2>
+      </div>
+      <p>Each menu includes tea, juice/smoothie, salad/bowl, warm meal, snack, herbs, practice, avoid list, and a journal prompt.</p>
     </div>
+    <div id="menuTabs" class="filters"></div>
+    <article id="organMenuCard" class="fullMenuCard"></article>
   </section>
 
-  <section id="recipes" class="section">
+  <section id="recipes" class="section alt">
     <div class="sectionHead">
       <div>
         <p class="eyebrow">Recipe Cards</p>
         <h2>Plant Dojo Kitchen Library</h2>
       </div>
-      <p>Filter recipe cards by body system, intention, and kitchen use.</p>
+      <p>These recipe cards are pulled from the organ menus and can later become printable cards or PDFs.</p>
     </div>
-
     <div class="filters">
       <button class="filterBtn active" data-filter="all">All</button>
       <button class="filterBtn" data-filter="Liver">Liver</button>
@@ -144,42 +122,27 @@
       <button class="filterBtn" data-filter="Heart">Heart</button>
       <button class="filterBtn" data-filter="Gut">Gut</button>
       <button class="filterBtn" data-filter="Skin">Skin</button>
-      <button class="filterBtn" data-filter="Nervous">Nervous</button>
+      <button class="filterBtn" data-filter="Brain">Brain</button>
     </div>
-
     <div id="recipeGrid" class="cardGrid"></div>
-  </section>
-
-  <section id="soap" class="section alt">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Soap Encyclopedia</p>
-        <h2>Customize a Soap Bar</h2>
-      </div>
-      <p>Search ingredients by skin goal, aroma, benefit, and blend idea.</p>
-    </div>
-
-    <input id="soapSearch" class="searchBox" placeholder="Search: peppermint, lavender, turmeric, oily skin, calming..." />
-    <div id="soapGrid" class="cardGrid"></div>
   </section>
 
   <section id="booking" class="section booking">
     <p class="eyebrow">Booking</p>
     <h2>Start a Plant Dojo session</h2>
     <form>
-      <input placeholder="Name" />
-      <input placeholder="Email or phone" />
+      <input placeholder="Name">
+      <input placeholder="Email or phone">
       <select>
+        <option>Organ menu consultation</option>
         <option>Private chef</option>
         <option>Wellness class</option>
-        <option>Menu consulting</option>
+        <option>Recipe card package</option>
         <option>Body OS package</option>
-        <option>Soap customization</option>
       </select>
       <textarea rows="5" placeholder="Tell me what you need..."></textarea>
       <button type="button" class="btn">Send Request</button>
     </form>
-    <p class="notice">Form is visual for now. We can connect it later.</p>
   </section>
 </main>
 

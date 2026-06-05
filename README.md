@@ -1,38 +1,23 @@
-# Plant Dojo Full Toolkit Website
+# Plant Dojo Organ Menu Update
 
-This package contains the actual working website files:
+Upload these files to your GitHub repository:
 
 - index.html
 - styles.css
 - script.js
 - README.md
 
-## What's included
+Then click Commit changes.
 
-- Interactive Body Map
-- Daily OS
-- Intention selector
-- Recipe Card Library
-- Searchable Soap Encyclopedia
-- Toolkit navigation
-- Booking section
-- Mobile responsive layout
+Live site:
+https://elven-blood.github.io/plant-dojo/
 
-## How to update GitHub
-
-1. Extract this ZIP.
-2. Go to your GitHub repository:
-   https://github.com/Elven-Blood/plant-dojo
-3. Click Add file.
-4. Click Upload files.
-5. Drag in:
-   - index.html
-   - styles.css
-   - script.js
-   - README.md
-6. Click Commit changes.
-7. Wait 1 to 3 minutes.
-8. Refresh your live site:
-   https://elven-blood.github.io/plant-dojo/
+Included:
+- Full menu for each organ/body system
+- Herb lists for each system
+- Tea, juice/smoothie, salad/bowl, warm meal, snack, practice, avoid list, and journal prompt
+- Interactive organ menu tabs
+- Body map updates the menu
+- Recipe cards generated from the organ menus
 
 Educational wellness content only. Not medical advice.
