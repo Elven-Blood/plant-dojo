@@ -1,239 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Dojo Body OS + Healing Hand</title>
-  <meta name="description" content="Plant Dojo interactive Body OS with organ menus, recipes, and Healing Hand herb card game." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plant Dojo Visual Card Update</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#home">
-    <span class="seal">🌿</span>
-    <span><strong>Plant Dojo</strong><small>Master the Plant. Master Yourself.</small></span>
-  </a>
-  <button class="menuBtn" aria-label="Open menu">☰</button>
-  <nav class="nav">
-    <a href="#body-os">Body OS</a>
-    <a href="#organ-menus">Organ Menus</a>
-    <a href="#recipes">Recipes</a>
-    <a href="#healing-hand">Healing Hand</a>
-    <a href="#store">Store</a>
-    <a href="#membership" class="pill">Membership</a>
-  </nav>
+<a class="brand" href="#home"><span class="seal">🌿</span><span><strong>Plant Dojo</strong><small>Master the Plant. Master Yourself.</small></span></a>
+<button class="menuBtn">☰</button>
+<nav class="nav">
+<a href="#body-os">Body OS</a><a href="#organ-menus">Organ Menus</a><a href="#healing-hand">Healing Hand</a><a href="#patients">Patients</a><a href="#store">Store</a><a class="pill" href="#membership">Membership</a>
+</nav>
 </header>
 
 <main>
-  <section id="home" class="hero section">
-    <div>
-      <p class="eyebrow">Plant Dojo Operating System</p>
-      <h1>Food, herbs, organ wisdom, and card game learning in one platform.</h1>
-      <p class="lead">Explore the human body map, unlock organ menus, open recipe cards, and learn herbs through the Healing Hand card game.</p>
-      <div class="actions">
-        <a href="#body-os" class="btn">Open Body Map</a>
-        <a href="#healing-hand" class="btn ghost">Play Healing Hand</a>
-      </div>
-      <p class="notice">Educational wellness guidance only. Not medical advice.</p>
-    </div>
-    <div class="heroPanel">
-      <p class="eyebrow">Platform Build</p>
-      <h3>Free Education + Paid Decks + Membership</h3>
-      <p>Give away the foundation. Sell the deeper guides, cards, classes, recipe packs, and custom services.</p>
-    </div>
-  </section>
-
-  <section id="body-os" class="section alt">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Interactive Human Body Map</p>
-        <h2>Tap the body. Feed the system.</h2>
-      </div>
-      <p>The body map is back. Select any system to update the protocol and open its full organ menu.</p>
-    </div>
-
-    <div class="bodyLayout">
-      <div class="bodyMap" aria-label="Interactive human body map">
-        <div class="bodyAura"></div>
-        <div class="shape head"></div>
-        <div class="shape neck"></div>
-        <div class="shape torso"></div>
-        <div class="shape pelvis"></div>
-        <div class="shape arm left"></div>
-        <div class="shape arm right"></div>
-        <div class="shape forearm left"></div>
-        <div class="shape forearm right"></div>
-        <div class="shape leg left"></div>
-        <div class="shape leg right"></div>
-
-        <button class="organDot" style="--x:50%;--y:10%" data-system="Brain">Brain</button>
-        <button class="organDot" style="--x:34%;--y:22%" data-system="Eyes & Vision">Eyes</button>
-        <button class="organDot" style="--x:40%;--y:38%" data-system="Lungs">Lungs</button>
-        <button class="organDot" style="--x:59%;--y:42%" data-system="Heart">Heart</button>
-        <button class="organDot" style="--x:42%;--y:54%" data-system="Liver">Liver</button>
-        <button class="organDot" style="--x:61%;--y:57%" data-system="Spleen">Spleen</button>
-        <button class="organDot" style="--x:50%;--y:67%" data-system="Gut & Digestion">Gut</button>
-        <button class="organDot" style="--x:50%;--y:77%" data-system="Kidneys & Adrenals">Kidneys</button>
-        <button class="organDot" style="--x:50%;--y:88%" data-system="Reproductive">Reproductive</button>
-        <button class="organDot" style="--x:18%;--y:44%" data-system="Skin & Lymph">Skin</button>
-        <button class="organDot" style="--x:82%;--y:44%" data-system="Blood & Circulation">Blood</button>
-        <button class="organDot" style="--x:50%;--y:49%" data-system="Nervous System">Nerves</button>
-      </div>
-
-      <article class="panel">
-        <p class="eyebrow" id="systemTone">Select a system</p>
-        <h3 id="systemTitle">Body Guidance</h3>
-        <p id="systemSummary">Tap a point on the body map to open a protocol.</p>
-        <div class="miniGrid">
-          <div><strong>Foods</strong><ul id="foodsList"></ul></div>
-          <div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div>
-          <div><strong>Practice</strong><ul id="practiceList"></ul></div>
-          <div><strong>Inner Work</strong><ul id="innerList"></ul></div>
-        </div>
-        <a href="#organ-menus" class="btn miniBtn">View Full Organ Menu</a>
-      </article>
-    </div>
-  </section>
-
-  <section id="organ-menus" class="section">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Full Organ Menus</p>
-        <h2>Tea, juice, salad, meal, herbs, and practice.</h2>
-      </div>
-      <p>Every system gets a full Plant Dojo pathway that can become a recipe card, PDF, class, QR card, or product.</p>
-    </div>
-    <div id="menuTabs" class="filters"></div>
-    <article id="organMenuCard" class="fullMenuCard"></article>
-  </section>
-
-  <section id="recipes" class="section alt">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Clickable Recipe Cards</p>
-        <h2>Tap a card to open full details.</h2>
-      </div>
-      <p>Each recipe explains the organ connection, herbs, benefits, practice, and paid product angle.</p>
-    </div>
-    <div class="filters">
-      <button class="filterBtn active" data-filter="all">All</button>
-      <button class="filterBtn" data-filter="Liver">Liver</button>
-      <button class="filterBtn" data-filter="Lungs">Lungs</button>
-      <button class="filterBtn" data-filter="Heart">Heart</button>
-      <button class="filterBtn" data-filter="Gut">Gut</button>
-      <button class="filterBtn" data-filter="Skin">Skin</button>
-      <button class="filterBtn" data-filter="Brain">Brain</button>
-      <button class="filterBtn" data-filter="Nervous System">Nervous</button>
-    </div>
-    <div id="recipeGrid" class="cardGrid"></div>
-  </section>
-
-  <section id="healing-hand" class="section">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Healing Hand Card Game</p>
-        <h2>Learn herbs like a game. Sell it like a product.</h2>
-      </div>
-      <p>Flip cards, study herb powers, match them to organs, and preview the deck as a future digital/physical product.</p>
-    </div>
-
-    <div class="gameIntro">
-      <article class="gameBox">
-        <h3>How It Works</h3>
-        <ul>
-          <li>Draw herb cards.</li>
-          <li>Match herbs to patient needs.</li>
-          <li>Support organ systems.</li>
-          <li>Earn vitality and mastery.</li>
-        </ul>
-      </article>
-      <article class="gameBox">
-        <h3>Deck Progress</h3>
-        <div class="progressRow"><span>White Belt Herbs</span><strong>25 / 100</strong></div>
-        <div class="progress"><span style="width:25%"></span></div>
-        <div class="progressRow"><span>Patients</span><strong>10 / 50</strong></div>
-        <div class="progress"><span style="width:20%"></span></div>
-        <div class="progressRow"><span>Organs</span><strong>12 / 12</strong></div>
-        <div class="progress"><span style="width:100%"></span></div>
-      </article>
-    </div>
-
-    <div class="filters">
-      <button class="cardFilter active" data-card-filter="all">All Herbs</button>
-      <button class="cardFilter" data-card-filter="Gut">Gut</button>
-      <button class="cardFilter" data-card-filter="Lungs">Lungs</button>
-      <button class="cardFilter" data-card-filter="Heart">Heart</button>
-      <button class="cardFilter" data-card-filter="Nervous">Nervous</button>
-      <button class="cardFilter" data-card-filter="Skin">Skin</button>
-      <button class="cardFilter" data-card-filter="Blood">Blood</button>
-    </div>
-
-    <input id="herbSearch" class="searchBox" placeholder="Search herb card: ginger, mullein, hawthorn..." />
-    <div id="herbCardGrid" class="flipGrid"></div>
-  </section>
-
-  <section id="game-cards" class="section alt">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Patient + Organ Cards</p>
-        <h2>The game gets deeper than herbs.</h2>
-      </div>
-      <p>These cards can become expansion packs, teaching tools, class activities, or printable downloads.</p>
-    </div>
-    <div id="patientGrid" class="cardGrid"></div>
-    <div id="organCardGrid" class="cardGrid"></div>
-  </section>
-
-  <section id="store" class="section">
-    <div class="sectionHead">
-      <div>
-        <p class="eyebrow">Store Roadmap</p>
-        <h2>Products this website can sell.</h2>
-      </div>
-      <p>Buttons are placeholders. Replace them with Stripe, PayPal, Gumroad, Shopify, or booking links later.</p>
-    </div>
-    <div class="cardGrid">
-      <article class="storeCard"><p class="eyebrow">Digital</p><h3>Healing Hand PDF Deck</h3><p>Printable herb cards, patient cards, and rules.</p><a class="btn" href="#" onclick="fakePay()">Preorder</a></article>
-      <article class="storeCard"><p class="eyebrow">Physical</p><h3>Starter Deck</h3><p>White Belt Herbs + Patient Cards + Rulebook.</p><a class="btn" href="#" onclick="fakePay()">Join Waitlist</a></article>
-      <article class="storeCard"><p class="eyebrow">Education</p><h3>Organ Menu Class Pack</h3><p>Teacher guide, student worksheets, recipe cards, and journal sheets.</p><a class="btn" href="#" onclick="fakePay()">Unlock</a></article>
-    </div>
-  </section>
-
-  <section id="membership" class="section membership alt">
-    <p class="eyebrow centerText">Membership Portal</p>
-    <h2 class="centerText">Free learning. Paid deeper access.</h2>
-    <p class="centerText planSub">This is the structure. Later we can connect real payment links and gated downloads.</p>
-
-    <div class="pricingGrid">
-      <article class="priceCard">
-        <p class="eyebrow">Free</p>
-        <h3>Plant Dojo Library</h3>
-        <ul><li>Body map</li><li>Starter organ menus</li><li>Sample recipe cards</li><li>Sample herb cards</li></ul>
-        <a class="btn ghost" href="#body-os">Start Free</a>
-      </article>
-      <article class="priceCard featured">
-        <p class="eyebrow">Member</p>
-        <h3>Dojo Member</h3>
-        <ul><li>Full recipe packs</li><li>Printable PDFs</li><li>Healing Hand downloads</li><li>Class replays</li></ul>
-        <a class="btn" href="#" onclick="fakePay()">Join Membership</a>
-      </article>
-      <article class="priceCard">
-        <p class="eyebrow">Premium</p>
-        <h3>Master Herbalist</h3>
-        <ul><li>Certification workbook</li><li>Full card deck files</li><li>Private consultation</li><li>Business/class toolkit</li></ul>
-        <a class="btn ghost" href="#" onclick="fakePay()">Apply</a>
-      </article>
-    </div>
-  </section>
-</main>
-
-<div id="recipeModal" class="modal" aria-hidden="true">
-  <div class="modalPanel">
-    <button class="closeBtn" id="closeModal">×</button>
-    <div id="modalContent"></div>
-  </div>
+<section id="home" class="hero section">
+<div>
+<p class="eyebrow">Plant Dojo Operating System</p>
+<h1>Healing Hand now has collectible visual cards.</h1>
+<p class="lead">Flip herb cards, study patient cards, use the body map, and turn the game into products, classes, decks, PDFs, and memberships.</p>
+<div class="actions"><a href="#healing-hand" class="btn">View Cards</a><a href="#body-os" class="btn ghost">Open Body Map</a></div>
+<p class="notice">Educational wellness guidance only. Not medical advice.</p>
 </div>
+<div class="heroCardPreview">
+<div class="sampleCard">
+<h3>GINGER</h3><div class="plantArt">🫚</div>
+<div class="beltRow"><span>WHITE BELT</span><span>⭐ 2</span></div>
+<div class="powers"><p>❤️ Circulation</p><p>🍽️ Digestion</p></div>
+<div class="cardFooter">PLANT DOJO</div>
+</div>
+</div>
+</section>
 
+<section id="body-os" class="section alt">
+<div class="sectionHead"><div><p class="eyebrow">Interactive Human Body Map</p><h2>Tap the body. Feed the system.</h2></div><p>Select a body point to update organ menus, recipes, and herb suggestions.</p></div>
+<div class="bodyLayout">
+<div class="bodyMap">
+<div class="bodyAura"></div><div class="shape head"></div><div class="shape neck"></div><div class="shape torso"></div><div class="shape pelvis"></div><div class="shape arm left"></div><div class="shape arm right"></div><div class="shape forearm left"></div><div class="shape forearm right"></div><div class="shape leg left"></div><div class="shape leg right"></div>
+<button class="organDot" style="--x:50%;--y:10%" data-system="Brain">Brain</button>
+<button class="organDot" style="--x:34%;--y:22%" data-system="Eyes & Vision">Eyes</button>
+<button class="organDot" style="--x:40%;--y:38%" data-system="Lungs">Lungs</button>
+<button class="organDot" style="--x:59%;--y:42%" data-system="Heart">Heart</button>
+<button class="organDot" style="--x:42%;--y:54%" data-system="Liver">Liver</button>
+<button class="organDot" style="--x:61%;--y:57%" data-system="Spleen">Spleen</button>
+<button class="organDot" style="--x:50%;--y:67%" data-system="Gut & Digestion">Gut</button>
+<button class="organDot" style="--x:50%;--y:77%" data-system="Kidneys & Adrenals">Kidneys</button>
+<button class="organDot" style="--x:50%;--y:88%" data-system="Reproductive">Reproductive</button>
+<button class="organDot" style="--x:18%;--y:44%" data-system="Skin & Lymph">Skin</button>
+<button class="organDot" style="--x:82%;--y:44%" data-system="Blood & Circulation">Blood</button>
+<button class="organDot" style="--x:50%;--y:49%" data-system="Nervous System">Nerves</button>
+</div>
+<article class="panel">
+<p class="eyebrow" id="systemTone">Select a system</p><h3 id="systemTitle">Body Guidance</h3><p id="systemSummary">Tap a point on the body map to open a protocol.</p>
+<div class="miniGrid"><div><strong>Foods</strong><ul id="foodsList"></ul></div><div><strong>Herbs / Drinks</strong><ul id="drinksList"></ul></div><div><strong>Practice</strong><ul id="practiceList"></ul></div><div><strong>Inner Work</strong><ul id="innerList"></ul></div></div>
+<a href="#organ-menus" class="btn miniBtn">View Full Organ Menu</a>
+</article>
+</div>
+</section>
+
+<section id="organ-menus" class="section">
+<div class="sectionHead"><div><p class="eyebrow">Full Organ Menus</p><h2>Tea, juice, meal, herbs, and practice.</h2></div><p>Each menu becomes a recipe card, class, PDF, QR card, or paid guide.</p></div>
+<div id="menuTabs" class="filters"></div><article id="organMenuCard" class="fullMenuCard"></article>
+</section>
+
+<section id="healing-hand" class="section alt">
+<div class="sectionHead"><div><p class="eyebrow">Healing Hand Card Game</p><h2>Visual herb cards with full backs.</h2></div><p>Click a card to flip it. Search or filter by organ system.</p></div>
+<div class="gameIntro"><article class="gameBox"><h3>How It Works</h3><ul><li>Draw herb cards.</li><li>Match herbs to patient weaknesses.</li><li>Support organ systems.</li><li>Earn vitality and mastery.</li></ul></article><article class="gameBox"><h3>Deck Progress</h3><div class="progressRow"><span>White Belt Herbs</span><strong>25 / 100</strong></div><div class="progress"><span style="width:25%"></span></div><div class="progressRow"><span>Patients</span><strong>10 / 50</strong></div><div class="progress"><span style="width:20%"></span></div></article></div>
+<div class="filters"><button class="cardFilter active" data-card-filter="all">All Herbs</button><button class="cardFilter" data-card-filter="Gut">Gut</button><button class="cardFilter" data-card-filter="Lungs">Lungs</button><button class="cardFilter" data-card-filter="Heart">Heart</button><button class="cardFilter" data-card-filter="Nervous">Nervous</button><button class="cardFilter" data-card-filter="Skin">Skin</button><button class="cardFilter" data-card-filter="Blood">Blood</button></div>
+<input id="herbSearch" class="searchBox" placeholder="Search herb card: ginger, garlic, peppermint...">
+<div id="herbCardGrid" class="flipGrid"></div>
+</section>
+
+<section id="patients" class="section">
+<div class="sectionHead"><div><p class="eyebrow">Patient Cards</p><h2>Conditions become challenges.</h2></div><p>Patient cards create gameplay: HP, symptoms, weaknesses, and herb synergy.</p></div>
+<div id="patientGrid" class="patientGrid"></div>
+</section>
+
+<section id="store" class="section alt">
+<div class="sectionHead"><div><p class="eyebrow">Store Roadmap</p><h2>Products this system can sell.</h2></div><p>Replace buttons later with Stripe, PayPal, Gumroad, Shopify, or booking links.</p></div>
+<div class="cardGrid"><article class="storeCard"><p class="eyebrow">Digital</p><h3>Healing Hand PDF Deck</h3><p>Printable herb cards, patient cards, and rules.</p><a class="btn" href="#" onclick="fakePay()">Preorder</a></article><article class="storeCard"><p class="eyebrow">Physical</p><h3>Starter Deck</h3><p>White Belt Herbs + Patient Cards + Rulebook.</p><a class="btn" href="#" onclick="fakePay()">Join Waitlist</a></article><article class="storeCard"><p class="eyebrow">Education</p><h3>Organ Menu Class Pack</h3><p>Teacher guide, student worksheets, recipe cards, and journal sheets.</p><a class="btn" href="#" onclick="fakePay()">Unlock</a></article></div>
+</section>
+
+<section id="membership" class="section membership">
+<p class="eyebrow centerText">Membership Portal</p><h2 class="centerText">Free learning. Paid deeper access.</h2><p class="centerText planSub">Structure is ready. Payment links can be connected later.</p>
+<div class="pricingGrid"><article class="priceCard"><p class="eyebrow">Free</p><h3>Plant Dojo Library</h3><ul><li>Body map</li><li>Starter organ menus</li><li>Sample recipe cards</li><li>Sample herb cards</li></ul><a class="btn ghost" href="#body-os">Start Free</a></article><article class="priceCard featured"><p class="eyebrow">Member</p><h3>Dojo Member</h3><ul><li>Full recipe packs</li><li>Printable PDFs</li><li>Healing Hand downloads</li><li>Class replays</li></ul><a class="btn" href="#" onclick="fakePay()">Join Membership</a></article><article class="priceCard"><p class="eyebrow">Premium</p><h3>Master Herbalist</h3><ul><li>Certification workbook</li><li>Full card deck files</li><li>Private consultation</li><li>Business/class toolkit</li></ul><a class="btn ghost" href="#" onclick="fakePay()">Apply</a></article></div>
+</section>
+</main>
 <footer>© <span id="year"></span> Plant Dojo Body OS + Healing Hand · Educational use only.</footer>
 <script src="script.js"></script>
 </body>
